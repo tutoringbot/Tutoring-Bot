@@ -1,2 +1,2 @@
 # Tutoring-Bot
-Tutoring Bot source code (python)
+Tutoring Bot source code 
