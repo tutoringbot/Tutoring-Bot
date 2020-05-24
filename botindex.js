@@ -29,9 +29,9 @@ fs.readdir('./commands/', (err, files) => {
 
 bot.on('ready', () => {
 	console.log('Ready!\nUse this link to add the bot to your disord server! \nhttps://discord.com/api/oauth2/authorize?client_id=713815087449767997&permissions=67648&scope=bot');
-	console.log(`Bot has started with ${bot.users.size} users in ${bot.channels.size} channels on ${bot.guilds.size} servers.`); 
+	console.log(`Bot has started with ${bot.users.cache.size} users in ${bot.channels.cache.size} channels on ${bot.guilds.cache.size} servers.`); 
 	bot.user.setStatus("online");
-	bot.user.setActivity(`!help | ${bot.users.size} Users!`);
+	bot.user.setActivity(`!help | ${bot.users.cache.size} Users!`);
 	//${bot.guilds.size} Servers |
 });
 
