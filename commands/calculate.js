@@ -21,7 +21,7 @@ module.exports.run = async (bot, message, args) => {
         //console.log(answer2)
         try{
             answer = queryresult.pods[0].subpods[0].plaintext
-            image = queryresult.pods[0].subpods[0].img.src
+            image = queryresult.pods[1].subpods[0].img.src
         }
         catch(error){
             message.channel.send("Hmmmm... I wasn't able to understand your input. Please try again!")
@@ -47,7 +47,7 @@ module.exports.run = async (bot, message, args) => {
                     answer2.push(queryresult.pods[i].subpods[0].plaintext)
                     //console.log(answer2)
                     try{
-                        embedmsg.addField(answer2[i], '\u200b', false)
+                        embedmsg.addField('\u200b', answer2[i], false)
                     }
                     catch(error){
                         message.channel.send("Hmmmm... I wasn't able to understand your input. Please try again!")
