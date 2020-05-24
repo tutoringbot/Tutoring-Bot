@@ -14,5 +14,5 @@ module.exports.run = async (bot, message, args) => {
 	
 }
 exports.configure = {
-command: "pokemonstats"
+  command: "pokemonstats"
 }

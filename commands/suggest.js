@@ -16,5 +16,5 @@ module.exports.run = async (bot, message, args) => {
     message.channel.send("Suggestion sent to the developers!")
 }
 exports.configure = {
-command: "suggest"
+    command: "suggest"
 }

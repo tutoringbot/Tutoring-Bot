@@ -9,7 +9,6 @@ function titleCase(str) {
 	var splitStr = str.toLowerCase().split(' ');
 	return splitStr; 
  };
- 
 fs.readdir('./commands/', (err, files) => {
 	if(err) console.error(err);
 
@@ -32,9 +31,7 @@ bot.on('ready', () => {
 	console.log(`Bot has started with ${bot.users.cache.size} users in ${bot.channels.cache.size} channels on ${bot.guilds.cache.size} servers.`); 
 	bot.user.setStatus("online");
 	bot.user.setActivity(`!help | ${bot.users.cache.size} Users!`);
-	//${bot.guilds.size} Servers |
 });
-
 bot.on('message', message => {
 	if (!message.content.startsWith(prefix)) return;
 	var cont = message.content.slice(prefix.length).split(' ');

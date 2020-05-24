@@ -27,7 +27,6 @@ module.exports.run = async (bot, message, args) => {
             message.channel.send("Hmmmm... I wasn't able to understand your input. Please try again!")
             return
         }
-      
         //console.log(answer)
         //console.log(image)
         const embedmsg = new Discord.MessageEmbed()
@@ -53,16 +52,12 @@ module.exports.run = async (bot, message, args) => {
                         message.channel.send("Hmmmm... I wasn't able to understand your input. Please try again!")
                         break
                     }
-                    
                 }
-                
-                
             }
         
         message.channel.send(embedmsg);
       }).catch(console.error)
-      
 }
 exports.configure = {
-command: "calculate"
+    command: "calculate"
 }

@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 module.exports.run = async (bot, message, args) => {
     var randomColor = '#' + ("000000" + Math.random().toString(16).slice(2, 8).toUpperCase()).slice(-6);
     //console.log(randomColor)
-    const exampleEmbed = new Discord.MessageEmbed()
+    const embedmsg = new Discord.MessageEmbed()
         .setColor(randomColor)
         .setTitle('Tutoring Bot')
         .setURL('https://tutoringbot.github.io/')
@@ -15,8 +15,7 @@ module.exports.run = async (bot, message, args) => {
         .addField('\u200b','<@713054876460122223>',true)
         .setTimestamp()
         .setFooter('tutoringbot.github.io', 'https://cdn.discordapp.com/attachments/713831448427364364/713917021531930694/b34c550ac62c82b3d4ef65519621751d.png');
-
-    message.channel.send(exampleEmbed);
+    message.channel.send(embedmsg);
 }
 exports.configure = {
     command: "about"
